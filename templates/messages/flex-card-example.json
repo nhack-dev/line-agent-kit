@@ -1,0 +1,25 @@
+{
+  "note": "Flex メッセージ（カード型）の見本。config/flow.json の messages の中にこのオブジェクトをそのまま入れられる",
+  "messages": [
+    {
+      "type": "flex",
+      "altText": "今週のおすすめ",
+      "contents": {
+        "type": "bubble",
+        "body": {
+          "type": "box", "layout": "vertical", "spacing": "md",
+          "contents": [
+            { "type": "text", "text": "今週のおすすめ", "weight": "bold", "size": "lg" },
+            { "type": "text", "text": "15分で作れる晩ごはん3品", "wrap": true, "color": "#555555" }
+          ]
+        },
+        "footer": {
+          "type": "box", "layout": "vertical",
+          "contents": [
+            { "type": "button", "style": "primary", "action": { "type": "postback", "label": "詳しく見る", "data": "buy=recipe-book" } }
+          ]
+        }
+      }
+    }
+  ]
+}

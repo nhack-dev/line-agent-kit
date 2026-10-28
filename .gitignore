@@ -1,0 +1,9 @@
+.env
+worker/.dev.vars
+worker/.wrangler/
+worker/node_modules/
+node_modules/
+logs/
+__pycache__/
+*.pyc
+config/flow.json

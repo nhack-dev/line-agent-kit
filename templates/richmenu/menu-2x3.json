@@ -1,0 +1,14 @@
+{
+  "size": { "width": 2500, "height": 1686 },
+  "selected": true,
+  "name": "main-menu",
+  "chatBarText": "メニュー",
+  "areas": [
+    { "bounds": { "x": 0,    "y": 0,   "width": 833, "height": 843 }, "action": { "type": "postback", "label": "アンケート", "data": "survey=first", "displayText": "アンケート" } },
+    { "bounds": { "x": 833,  "y": 0,   "width": 834, "height": 843 }, "action": { "type": "postback", "label": "相談を予約", "data": "book", "displayText": "予約" } },
+    { "bounds": { "x": 1667, "y": 0,   "width": 833, "height": 843 }, "action": { "type": "postback", "label": "教材を見る", "data": "buy=recipe-book", "displayText": "教材を見る" } },
+    { "bounds": { "x": 0,    "y": 843, "width": 833, "height": 843 }, "action": { "type": "message", "label": "よくある質問", "text": "よくある質問" } },
+    { "bounds": { "x": 833,  "y": 843, "width": 834, "height": 843 }, "action": { "type": "uri", "label": "ブログ", "uri": "https://example.com/blog" } },
+    { "bounds": { "x": 1667, "y": 843, "width": 833, "height": 843 }, "action": { "type": "postback", "label": "興味あり", "data": "tag=interest:menu&kw=price", "displayText": "料金を知りたい" } }
+  ]
+}

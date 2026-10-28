@@ -1,0 +1,17 @@
+# line-agent-kit の Worker の設定（Cloudflare Workers 無料プランで動く）
+name = "line-agent-kit"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+# 5分おきにステップ配信とリマインドを見る（cron は UTC で書く。5分おきはどの時間帯でも同じ）
+# 無料プランの cron は1アカウント5本まで。この Worker は1本だけ使う
+[triggers]
+crons = ["*/5 * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "line-agent-kit"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"   # npx wrangler d1 create line-agent-kit で出る値
+
+# 鍵はここに書かない。npx wrangler secret put <名前> で入れる:
+#   LINE_CHANNEL_ACCESS_TOKEN / LINE_CHANNEL_SECRET / ADMIN_TOKEN / （決済を使うなら）STRIPE_WEBHOOK_SECRET
